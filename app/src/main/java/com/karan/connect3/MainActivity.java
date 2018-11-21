@@ -10,7 +10,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int activePlayer=1;
+    // gameActive will become false when someone wins to constrain anyone to click on ImageView
     boolean gameActive = true;
+    // 3 means ImageView is not tapped yet when it is tapped it is replaced by activePlayer
     int[] state={3,3,3,3,3,3,3,3,3};
     int[][] winningTags= {{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
     public void bring(View view) {
