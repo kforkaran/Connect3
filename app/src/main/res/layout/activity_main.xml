@@ -128,38 +128,54 @@
     </android.support.v7.widget.GridLayout>
 
     <LinearLayout
-        android:id="@+id/playAgainLayout"
-        android:layout_width="244dp"
-        android:layout_height="244dp"
+        android:id="@+id/winnerMessageLinearLayout"
+        android:layout_width="368dp"
+        android:layout_height="73dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_blue_dark"
         android:orientation="vertical"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/winnerMessage"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:text="PLAYER 1 WON!!"
-            android:textSize="25sp"
+            android:textColor="@color/colorAccent"
+            android:textSize="35sp"
+            android:textStyle="bold"
             app:fontFamily="casual" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playAgianLinearLayout"
+        android:layout_width="368dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/playAgainButton"
-            android:layout_width="147dp"
-            android:layout_height="68dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="50dp"
+            android:id="@+id/playAgainBtn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="10dp"
             android:onClick="playAgain"
             android:text="Play Again" />
     </LinearLayout>

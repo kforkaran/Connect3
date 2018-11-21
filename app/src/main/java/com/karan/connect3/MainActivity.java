@@ -39,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
                         winner = "Player 2 has WON!!";
                     TextView winnerMessage = (TextView) findViewById(R.id.winnerMessage);
                     winnerMessage.setText(winner);
-                    LinearLayout layout = (LinearLayout) findViewById(R.id.playAgainLayout);
+                    LinearLayout layout = (LinearLayout) findViewById(R.id.winnerMessageLinearLayout);
                     layout.setVisibility(View.VISIBLE);
+                    LinearLayout layout1 = (LinearLayout) findViewById(R.id.playAgianLinearLayout);
+                    layout1.setVisibility(View.VISIBLE);
                 } else {
                     boolean gameOver = true;
                     for (int draw : state) {
@@ -50,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
                     if (gameOver) {
                         TextView winnerMessage = (TextView) findViewById(R.id.winnerMessage);
                         winnerMessage.setText("It's a draw!!");
-                        LinearLayout layout = (LinearLayout) findViewById(R.id.playAgainLayout);
+                        LinearLayout layout = (LinearLayout) findViewById(R.id.winnerMessageLinearLayout);
                         layout.setVisibility(View.VISIBLE);
+                        LinearLayout layout1 = (LinearLayout) findViewById(R.id.playAgianLinearLayout);
+                        layout1.setVisibility(View.VISIBLE);
                     }
                 }
             }
@@ -59,8 +63,10 @@ public class MainActivity extends AppCompatActivity {
     }
         public void playAgain(View view){
         gameActive = true;
-        LinearLayout layout = (LinearLayout) findViewById(R.id.playAgainLayout);
-        layout.setVisibility(View.INVISIBLE);
+            LinearLayout layout = (LinearLayout) findViewById(R.id.winnerMessageLinearLayout);
+            layout.setVisibility(View.INVISIBLE);
+            LinearLayout layout1 = (LinearLayout) findViewById(R.id.playAgianLinearLayout);
+            layout1.setVisibility(View.INVISIBLE);
         activePlayer = 1;
         for (int i = 0; i < state.length; i++) {
             state[i] = 3;
